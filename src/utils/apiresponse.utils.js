@@ -5,3 +5,13 @@ export class APIREsponse {
         this.statuscode  = statuscode       
     }
 }
+
+
+export const  Response = (res , message ,  statuscode)=>{
+
+    res.status(statuscode)
+    .json(
+        new APIREsponse(message , null, statuscode)
+    )
+ 
+}

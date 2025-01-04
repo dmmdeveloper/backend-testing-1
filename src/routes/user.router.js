@@ -7,6 +7,6 @@ const userRouter  = Router()
 
 
 
-userRouter.route("/register").get(Register)
+userRouter.route("/register").post(Register)
 
 export default userRouter ;

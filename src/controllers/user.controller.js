@@ -25,6 +25,8 @@ for(let field of requiredFields){
 
 const findUser =  await User.findOne({email})
 if(findUser){
+    Response(res, `User Already Registered ` , 400 )
+
     throw new APIError(`User Already Registred :)` , 400)
 }
 

@@ -18,7 +18,27 @@ app.use(cors())
 
 app.get("/" , (req, res)=>{
     console.log(req.url );
-    res.send(`<h1> Hello My Backend Deployment Testing..</h1>`)
+    res.send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1> Hello Dear I am fine Good</h1>
+<h1> <br>
+<a href="https://bcknone.vercel.app/user/set-cookie"> Set Cookie</a>
+
+</h1>
+
+<h1>
+    <a href="https://bcknone.vercel.app/user/cookie"> Get Cookies</a>
+</h1>
+
+    
+</body>
+</html>`)
 })
 
 

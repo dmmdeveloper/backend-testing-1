@@ -75,4 +75,29 @@ console.log(req.params);
     
 } )
 
-export { Register ,file  ,params }
+
+const cookie  = asyncHandler ( async (req,res ) =>{
+    console.log(req.url);
+
+console.log(req.cookie);
+
+res
+.status(200)
+.cookie("cookie" , "786")
+.json( 
+    new APIREsponse("Cookies Good Working" , req.cookie , 200  )
+   )
+})
+
+
+const setCookie = asyncHandler ( (req,res) =>{
+    
+
+    res.status(200)
+    .cookie("cookie" , "786-110")
+    .json( new APIREsponse("Cookies Seted ", {} , 200))
+
+} ) 
+
+
+export { Register ,file  ,params  ,cookie  ,setCookie }

@@ -10,7 +10,13 @@ app.use(express.json({limit:"200kb"}))
 app.use(express.urlencoded({limit:"200k" , extended:true}))
 app.use(express.static("public"))
 app.use(cookieParser())
-app.use(cors())
+
+app.use(cors({
+    origin : "https://bcknone.vercel.app",
+    credentials:true
+}
+
+))
 
 
 

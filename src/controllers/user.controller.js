@@ -77,25 +77,19 @@ console.log(req.params);
 
 
 const cookie  = asyncHandler ( async (req,res ) =>{
-
     console.log(req.url);
-
 console.log(req.cookie);
-
 res
 .status(200)
-.cookie("cookie" , "0786_0110")
 .json( 
-    new APIREsponse("Cookies Good Working" , req.cookie , 200  )
+    new APIREsponse("Cookies Good Working - Fetched (-:-) ;" , req.cookie , 200  )
    )
 })
 
-
 const setCookie = asyncHandler ( (req,res) =>{
 
-
     res.status(200)
-    .cookie("cookie" , "786_110")
+    .cookie("cookie" , "786_110>")
     .json( new APIREsponse("Cookies Seted ", {} , 200))
 
 } ) 

@@ -2,6 +2,7 @@ import { User } from "../models/user.model.js";
 import { APIError } from "../utils/apierror.utils.js";
 import { APIREsponse, Response } from "../utils/apiresponse.utils.js";
 import { asyncHandler } from "../utils/asynchandler.utils.js";
+import { uploadOnCloudinary } from "../utils/uploadOnCloudinary.utils.js";
 
 const Register = asyncHandler( async (req , res)=>{    
     console.log(req.url);
@@ -45,13 +46,17 @@ const file = asyncHandler( async (req , res) =>{
 
 console.log(file);
 
+const  fileURL = await uploadOnCloudinary(file)
+console.log( "URL : ", fileURL);
+
+
 
 
 
     res
     .status(200)
     .json(
-        new APIREsponse("File Uploaded Success Fully !!!", {}  , 200)
+        new APIREsponse("File Uploaded Success Fully !!!", fileURL  , 200)
     )
     
 })

@@ -11,7 +11,7 @@ const userRouter  = Router()
 userRouter.route("/register").post(Register)
 userRouter.route("/file").post( upload.single("file"), file)
 userRouter.route("/param/:param").post(params)
-userRouter.route("/cookie").get  (  acceeCookie ,cookie)
+userRouter.route("/cookie").get  (acceeCookie ,cookie)
 userRouter.route("/set-cookie").get(setCookie)
 
-export default userRouter ;
+export default userRouter;

@@ -84,6 +84,7 @@ console.log(req.cookie);
 
 res
 .status(200)
+.cookie("cookie" , "0786_0110")
 .json( 
     new APIREsponse("Cookies Good Working" , req.cookie , 200  )
    )

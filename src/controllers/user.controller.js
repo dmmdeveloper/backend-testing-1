@@ -87,9 +87,9 @@ res
 })
 
 const setCookie = asyncHandler ( (req,res) =>{
-
+    
     res.status(200)
-    .cookie("cookie" , "786_110>")
+    .cookie("cookie" , "786_110_ Masha Allah"  , { httpOnly  :true , secure : true} )
     .json( new APIREsponse("Cookies Seted ", {} , 200))
 
 } ) 

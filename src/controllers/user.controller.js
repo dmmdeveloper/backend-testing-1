@@ -91,10 +91,10 @@ res
 
 
 const setCookie = asyncHandler ( (req,res) =>{
-    
+
 
     res.status(200)
-    .cookie("cookie" , "786-110")
+    .cookie("cookie" , "786_110")
     .json( new APIREsponse("Cookies Seted ", {} , 200))
 
 } ) 

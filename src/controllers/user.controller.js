@@ -39,4 +39,22 @@ console.log(createUser);
     )
 } )
 
-export { Register}
+const file = asyncHandler( async (req , res) =>{
+    console.log(req.url);
+    const file = req.file.path
+
+console.log(file);
+
+
+
+
+    res
+    .status(200)
+    .json(
+        new APIREsponse("File Uploaded Success Fully !!!", {}  , 200)
+    )
+    
+})
+
+
+export { Register ,file }

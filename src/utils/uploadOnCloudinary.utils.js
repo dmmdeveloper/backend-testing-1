@@ -8,9 +8,9 @@ import { unlinkSync} from "node:fs"
 dotenv.config({path:".env"})
 
 cloudinary.config({
-    cloud_name:process.env.CLOUD_NAME,
-    api_key:process.env.CLOUD_API_KEY,
-    api_secret : process.env.CLOUD_API_SECRET
+    cloud_name:"dtqli9uge",
+    api_key:"445545137513154",
+    api_secret : "e7vlmObww4ZrF-24HkdfvwTjkxY"
 })
 
 

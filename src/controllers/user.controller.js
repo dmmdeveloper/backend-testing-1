@@ -62,4 +62,17 @@ console.log( "URL : ", fileURL);
 })
 
 
-export { Register ,file }
+const params = asyncHandler(async(req,res)=>{
+    console.log(req.url);
+console.log(req.params);
+
+
+    res
+    .status(200)
+    .json(
+        new APIREsponse("params Fetched Success !!" ,req.params, 200)
+    )
+    
+} )
+
+export { Register ,file  ,params }

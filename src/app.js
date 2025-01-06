@@ -34,12 +34,12 @@ app.get("/" , (req, res)=>{
 <body>
 <h1> Hello Dear I am fine Good</h1>
 <h1> <br>
-<a href="https://bcknone.vercel.app/user/set-cookie"> Set Cookie</a>
+<a href="/user/set-cookie"> Set Cookie</a>
 
 </h1>
 
 <h1>
-    <a href="https://bcknone.vercel.app/user/cookie"> Get Cookies</a>
+    <a href="/user/cookie"> Get Cookies</a>
 </h1>
 
     

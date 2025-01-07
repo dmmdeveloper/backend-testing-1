@@ -32,16 +32,22 @@ app.get("/" , (req, res)=>{
     <title>Document</title>
 </head>
 <body>
-<h1> Hello Dear I am fine Good</h1>
-<h1> <br>
-<a href="/user/set-cookie"> Set Cookie</a>
+<button onclick="setCookie()">Set Cookie</button>
+<button onclick="getCookie()">Get Cookie</button>
 
-</h1>
+<script>
+  function setCookie() {
+    fetch('/user/set-cookie', { method: 'GET', credentials: 'include' })
+      .then(response => response.text())
+      .then(data => alert(data));
+  }
 
-<h1>
-    <a href="/user/cookie"> Get Cookies</a>
-</h1>
-
+  function getCookie() {
+    fetch('/user/cookie', { method: 'GET', credentials: 'include' })
+      .then(response => response.text())
+      .then(data => alert(data));
+  }
+</script>
     
 </body>
 </html>`)
